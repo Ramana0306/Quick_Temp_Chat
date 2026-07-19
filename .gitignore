@@ -1,0 +1,18 @@
+# Environment variables
+.env
+
+# IntelliJ
+.idea/
+*.iml
+
+# Java
+backend/target/
+*.log
+
+# React
+frontend/node_modules/
+frontend/dist/
+
+# OS
+.DS_Store
+Thumbs.db
