@@ -16,7 +16,7 @@ export default function ChatRoom() {
 
     useEffect(() => {
         const client = new Client({
-            webSocketFactory: () => new SockJS("http://localhost:8080/ws"),
+            webSocketFactory: () => new SockJS("http://13.48.6.97:8080/ws"),
             connectHeaders: { Authorization: `Bearer ${token}` },
             onConnect: () => {
                 setConnected(true);
