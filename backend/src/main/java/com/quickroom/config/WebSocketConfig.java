@@ -1,3 +1,4 @@
+
 package com.quickroom.config;
 
 import org.springframework.context.annotation.Configuration;
@@ -16,15 +17,14 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         registry.setApplicationDestinationPrefixes("/app");
     }
 
-    
-@Override
-public void registerStompEndpoints(StompEndpointRegistry registry) {
-    registry.addEndpoint("/ws")
-            .setAllowedOriginPatterns(
-                "http://localhost:5173",
-                "https://quick-temp-*-ramana20.vercel.app"
-            )
-            .withSockJS();
-}
-
+    @Override
+    public void registerStompEndpoints(StompEndpointRegistry registry) {
+        registry.addEndpoint("/ws")
+                .setAllowedOriginPatterns(
+                    "http://localhost:5173",
+                    "https://quick-temp-*-ramana20.vercel.app",
+                    "https://quick-temp-rapid.vercel.app"
+                )
+                .withSockJS();
+    }
 }
