@@ -74,9 +74,9 @@ public CorsConfigurationSource corsSource() {
     CorsConfiguration config = new CorsConfiguration();
 
     config.setAllowedOrigins(List.of(
-        "http://localhost:5173",
-        "https://quick-temp-rapid-25bt38api-ramana20.vercel.app"
-    ));
+    "http://localhost:5173",
+    "https://quick-temp-rapid-mn189f7vi-ramana20.vercel.app"
+));
 
     config.setAllowedMethods(List.of(
         "GET", "POST", "PUT", "DELETE", "OPTIONS"
