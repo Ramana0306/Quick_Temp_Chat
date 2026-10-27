@@ -72,8 +72,9 @@ public class SecurityConfig {
     public CorsConfigurationSource corsSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOriginPatterns(List.of(
-                "http://localhost:*"
-                "http://13.48.6.97:*"
+                "http://localhost:*",
+                "http://13.48.6.97:*",
+                "https://*.onrender.com"
         ));
 
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
