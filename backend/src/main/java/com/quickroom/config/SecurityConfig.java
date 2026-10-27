@@ -73,10 +73,12 @@ public class SecurityConfig {
 public CorsConfigurationSource corsSource() {
     CorsConfiguration config = new CorsConfiguration();
 
-    config.setAllowedOrigins(List.of(
+    
+config.setAllowedOriginPatterns(List.of(
     "http://localhost:5173",
-    "https://quick-temp-rapid-mn189f7vi-ramana20.vercel.app"
+    "https://quick-temp-*-ramana20.vercel.app"
 ));
+
 
     config.setAllowedMethods(List.of(
         "GET", "POST", "PUT", "DELETE", "OPTIONS"
