@@ -22,7 +22,7 @@ QuickRoom is a simple real-time chat application developed using Java Spring Boo
 
 ## Live Demo
 
-- **Frontend:** https://quick-temp-rapid.vercel.app
+- **Frontend:** https://quick-temp-rapid-nq2h5nbph-ramana20.vercel.app
 - **Backend:** https://quick-temp-chat.onrender.com
 
 ## How to Run Locally
