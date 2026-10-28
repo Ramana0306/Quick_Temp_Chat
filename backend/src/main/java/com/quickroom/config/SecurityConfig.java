@@ -76,6 +76,7 @@ public CorsConfigurationSource corsSource() {
     
 config.setAllowedOriginPatterns(List.of(
     "http://localhost:5173",
+    "https://quick-temp-rapid.vercel.app",
     "https://quick-temp-*-ramana20.vercel.app"
 ));
 
