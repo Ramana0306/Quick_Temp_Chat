@@ -1,130 +1,60 @@
-# QuickRoom
+# QuickRoom - Real-Time Chat Application 💬
 
-A simple **real-time chat application** built with Spring Boot and React. Users can create or join a temporary room and chat with another user in real time.
+QuickRoom is a simple real-time chat application developed using Java Spring Boot and React. Users can register, log in, join chat rooms, and send messages instantly.
 
-## 🚀 Features
+## Technologies Used
 
-* User Registration & Login
-* JWT-based Authentication
-* Create a chat room with a unique room code
-* Join a room using the room code
-* Real-time messaging using WebSocket
-* Maximum 2 users per room
-* Room is removed when both users leave
-* Messages are not permanently stored
+- **Frontend:** React, Vite, Tailwind CSS
+- **Backend:** Java 21, Spring Boot
+- **Database:** PostgreSQL
+- **Security:** Spring Security, JWT
+- **Real-Time Chat:** WebSocket, STOMP, SockJS
+- **Deployment:** Vercel, Render, Supabase
 
-## 🛠️ Tech Stack
+## Features
 
-**Backend**
+- User registration and login
+- JWT-based authentication
+- Create and join chat rooms
+- Real-time messaging
+- Maximum two users per room
+- Join and leave notifications
 
-* Java 21
-* Spring Boot
-* Spring Security
-* Spring Data JPA
-* WebSocket / STOMP
-* PostgreSQL
-* Maven
+## Live Demo
 
-**Frontend**
+- **Frontend:** https://quick-temp-rapid.vercel.app
+- **Backend:** https://quick-temp-chat.onrender.com
 
-* React
-* Vite
-* Tailwind CSS
-* Axios
-* STOMP.js
+## How to Run Locally
 
-## 🏗️ Architecture
+**1. Clone the repository**
 
-```text
-React + Vite
-     ↓
-REST API / WebSocket
-     ↓
-Spring Boot
-     ↓
-Controller
-     ↓
-Service
-     ↓
-Repository
-     ↓
-PostgreSQL
+```bash
+git clone https://github.com/Ramana0306/Quick_Temp_Chat.git
+cd Quick_Temp_Chat
 ```
 
-## 🔐 Authentication
+**2. Run the backend**
 
-The application uses **JWT authentication**.
+Configure the PostgreSQL database and required environment variables, then run:
 
-```text
-Login
-  ↓
-JWT Token
-  ↓
-Authenticated API Requests
+```bash
+cd backend
+mvn spring-boot:run
 ```
 
-Passwords are securely hashed before being stored.
+**3. Run the frontend**
 
-## 💬 Real-Time Chat
+Open another terminal and run:
 
-QuickRoom uses **WebSocket with STOMP** for real-time communication.
-
-```text
-User A
-   ↓
-WebSocket
-   ↓
-Spring Boot
-   ↓
-Room Topic
-   ↓
-User B
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-Messages are delivered instantly without repeatedly polling the server.
+## Author
 
-## 🌐 Main APIs
+Ramana M.
 
-| Method | Endpoint             | Description      |
-| ------ | -------------------- | ---------------- |
-| POST   | `/api/auth/register` | Register user    |
-| POST   | `/api/auth/login`    | Login            |
-| POST   | `/api/rooms/create`  | Create room      |
-| POST   | `/api/rooms/join`    | Join room        |
-| POST   | `/api/rooms/leave`   | Leave room       |
-| GET    | `/api/rooms/{code}`  | Get room details |
-
-Room APIs require JWT authentication.
-
-
-Web App live at:
-
-```text
-http://13.48.6.97:3000
-```
-
-## 📚 What I Learned
-
-* Building REST APIs with Spring Boot
-* JWT authentication with Spring Security
-* Database integration using Spring Data JPA
-* Real-time communication using WebSocket
-* STOMP messaging
-* React component development
-* REST API and WebSocket integration
-* Layered backend architecture
-* Authentication and user access control
-
-## 🔮 Future Improvements
-
-* Private room invitations
-* Online/offline user status
-* Typing indicator
-* Message timestamps
-* Message history
-* Automated testing
-* Docker deployment
-
-## 👨‍💻 About
-
-This project was built to strengthen my practical understanding of **Java, Spring Boot, REST APIs, WebSocket, PostgreSQL, and React** while developing a complete full-stack application.
+GitHub: https://github.com/Ramana0306
